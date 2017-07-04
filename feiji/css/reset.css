@@ -1,0 +1,38 @@
+body,html,head,h1,h2,h3,h4,h5,h6,ol,ul,img,input,dl,dt,dd,aside,nav,figure,section,
+a,i,strong,span,header,footer,article,fieldset,form,header,div,p{margin:0;padding: 0;}
+h1,h2,h3,h4,h5,h6,strong,b{font-weight: 100;}
+fieldset,img{border:none;}
+body{font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA;background: #fff;}
+a{text-decoration: none;}
+ol,ul{list-style: none;}
+i,em{font-style: normal;}
+input{outline: none;}
+.clear:after{content: '.';clear:both;display: block;height:0;overflow: hidden;visibility: hidden;}
+
+
+
+
+@font-face {font-family: "iconfont";
+    src: url('../iconfont/iconfont.eot?t=1493119196696'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?t=1493119196696#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff?t=1493119196696') format('woff'), /* chrome, firefox */
+    url('../iconfont/iconfont.ttf?t=1493119196696') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg?t=1493119196696#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+
+
+

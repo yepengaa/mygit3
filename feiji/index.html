@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞机大战</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/gameInterface.js"></script>
+    <script src="js/myPlane.js"></script>
+    <script src="js/mybullet.js"></script>
+    <script src="js/foePlane.js"></script>
+    <script src="js/monitor.js"></script>
+    <script src="js/enemybullet.js"></script>
+    <script src="js/ajax.js"></script>
+
+    <script>
+        onload=function () {
+            var olist = document.getElementById("list");
+
+            var oLi = document.getElementsByTagName("li");
+
+            for(var i=0; i<oLi.length; i++){
+
+                oLi[i].onclick=function () {
+                    myPlane.difficulty = this.value;  //选择难度
+                    olist.remove();            //点击开始初始化游戏界面
+                    gameEngine.init().state();   //加载游戏
+
+
+
+                }
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <div id="load">
+        <ul id="list">
+            <li value="600">超级困难</li>
+            <li value="400">非常困难</li>
+            <li value="200">比较困难</li>
+            <li value="120">春哥附体</li>
+        </ul>
+    </div>
+</body>
+</html>

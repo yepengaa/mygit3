@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>榜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            width: 100%;
+            min-height: 100%;
+        }
+        div{
+            width: 600px;
+            height: 100%;
+            background:#8ccfcd;
+            margin: auto;
+        }
+        ul{
+            width: 100%;
+            list-style: none;
+
+        }
+        li{
+            width: 300px;
+            height: 40px;
+            border-radius: 5px;
+            background: #6999f0;
+            margin-top:10px;
+            margin-left:10px;
+            padding-left:10px;
+            line-height:40px;
+            font-size: 20px;
+            color:#8622ed;
+        }
+    </style>
+    <script src="js/ajax.js"></script>
+    <script>
+        onload=function () {
+
+            var oList = document.getElementsByTagName("ul")[0];
+
+            ajax({
+                type:"get",
+                url: "http://60.205.181.47/myPHPCode4/getRank.php",
+                data: {},
+                async: true,
+                success:function(data){
+                    console.log(data);
+
+                    var arr = JSON.parse(data);
+
+                    for (var i=0; i<arr.length; i++){
+                        var obj = arr[i];
+
+                        //创建节点
+                        var li = document.createElement("li");
+                        li.innerHTML = obj.name + " : " + obj.score;
+                        oList.appendChild(li);
+                    }
+
+                }
+            })
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+
+
+        </ul>
+    </div>
+</body>
+</html>
